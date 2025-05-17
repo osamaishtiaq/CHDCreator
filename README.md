@@ -6,6 +6,9 @@ A simple WPF frontend for `chdman.exe` that converts CD-based game images (`.cue
 
 ---
 
+## Download and Usage
+* Go to releases tab and dowload the latest CHDConverter-v1.x.x.zip file. Extract it and run the app. 
+
 ## 📦 Features
 
 * Drag-and-drop or file-picker UI
