@@ -101,24 +101,6 @@ public partial class MainWindow : Window
                     }
                 };
 
-                process.Exited += (s, ea) =>
-                {
-                    Dispatcher.Invoke(() =>
-                    {
-                        if (process.ExitCode == 0)
-                        {
-                            StatusText.Text = "Success: CHD created.";
-                            StatusText.Foreground = System.Windows.Media.Brushes.Green;
-                        }
-                        else
-                        {
-                            StatusText.Text = "Conversion failed.";
-                            StatusText.Foreground = System.Windows.Media.Brushes.Red;
-                        }
-                    });
-                };
-
-
                 process.Start();
                 process.BeginOutputReadLine();
                 process.BeginErrorReadLine();
