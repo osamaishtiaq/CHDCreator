@@ -1,0 +1,33 @@
+﻿<Window x:Class="CHDConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CHDConverter"
+        mc:Ignorable="d"
+        Title="CHDCreator" Height="640" Width="480" ResizeMode="NoResize" SizeToContent="Height" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Select .gdi or .cue file:" Margin="0,0,0,5"/>
+            <DockPanel>
+                <TextBox x:Name="InputFilePath" Width="360" IsReadOnly="True" Margin="0,0,5,0"/>
+                <Button x:Name="FileBrowseButton" Content="Browse" Click="Browse_Click"/>
+            </DockPanel>
+
+            <TextBlock Text="Output .chd path:" Margin="0,10,0,5"/>
+            <TextBox x:Name="OutputFilePath" Width="460" IsReadOnly="True"/>
+
+            <Button x:Name="ConvertButton" Content="Convert to CHD" Margin="0,15,0,0" Click="Convert_Click" Width="150" HorizontalAlignment="Left"/>
+
+            <ProgressBar x:Name="ProgressBar" Height="20" Width="460" Margin="0,10,0,0" Visibility="Visible" IsIndeterminate="False"/>
+
+            <TextBlock x:Name="StatusText" Margin="0,10,0,0" Foreground="Green" TextWrapping="Wrap"/>
+            <TextBox x:Name="ConsoleOutput"
+                Margin="0,20,0,0"
+                Height="200"
+                IsReadOnly="True"
+                VerticalScrollBarVisibility="Auto"
+                TextWrapping="Wrap"/>
+        </StackPanel>
+    </Grid>
+</Window>

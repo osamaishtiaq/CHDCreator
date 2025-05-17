@@ -1,0 +1,1 @@
+for /r %%i in (*.cue) do chdman.exe createcd -i "%%i" -o "%%~ni.chd"
